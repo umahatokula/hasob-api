@@ -26,7 +26,7 @@ class ExampleTest extends TestCase
         
         $response = $this->post('/api/auth/register', $user);
 
-        $response->assertOk();
+        $response->assertCreated();
         $this->assertCount(1, User::all());
     }
 }
